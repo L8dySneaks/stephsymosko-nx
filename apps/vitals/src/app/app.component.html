@@ -1,8 +1,6 @@
 <h1>Vitals</h1>
 
-<ul>
-  <li *ngFor="let v of vitals" class="vital">{{ v.type }}</li>
-</ul>
+<stephsymosko-nx-vitals [vitals]="vitals"></stephsymosko-nx-vitals>
 
 
 <button id="add-vital" (click)="addVital()">Add Vital</button>

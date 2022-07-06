@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@stephsymosko-nx/data-access": ["libs/data-access/src/index.ts"]
+      "@stephsymosko-nx/data-access": ["libs/data-access/src/index.ts"],
+      "@stephsymosko-nx/shared-ui": ["libs/shared-ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
