@@ -1,1 +1,8 @@
-<stephsymosko-nx-nx-welcome></stephsymosko-nx-nx-welcome>
+<h1>Vitals</h1>
+
+<ul>
+  <li *ngFor="let v of vitals" class="vital">{{ v.type }}</li>
+</ul>
+
+
+<button id="add-vital" (click)="addVital()">Add Vital</button>
