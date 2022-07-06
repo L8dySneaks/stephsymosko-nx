@@ -1,10 +1,5 @@
 import { Injectable } from '@nestjs/common';
-
-interface Vital {
-  type: string;
-  value: string;
-  label: string;
-}
+import { Vital } from '@stephsymosko-nx/data-access';
 
 @Injectable()
 export class AppService {

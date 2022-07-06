@@ -1,11 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-
-interface Vital {
-  type: string;
-  value: string;
-  label: string;
-}
+import { Vital } from '@stephsymosko-nx/data-access';
 
 @Component({
   selector: 'stephsymosko-nx-root',
