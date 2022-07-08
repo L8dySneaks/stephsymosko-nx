@@ -1,3 +1,9 @@
 <ul>
   <li *ngFor="let v of vitals" class="vital">{{ v.type }}</li>
 </ul>
+
+
+
+<div class="flex flex-row">
+  <div class="basis-1/4" *ngFor="let v of vitals" class="vital">{{ v.type }}</div>
+</div>
