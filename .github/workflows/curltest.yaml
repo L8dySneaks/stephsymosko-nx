@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get-date
-        run: RELEASEDATE=$(date +"%m/%d/%YT%H:%M:%S%p")
+        run: RELEASEDATE=date +"%s"
       - name: print-date
         run: echo "RELEASEDATE=$RELEASEDATE"
       - name: create marker
@@ -18,7 +18,7 @@ jobs:
             --data '{"prefix": "dsg2",
           "eventStart": "1536552000",
           "eventType": "site",
-          "eventName": "Actions Test 2",
+          "eventName": "Actions Test 7",
           "annotation": "Secrets Testing",
           "lineColor": "yellow",
           "lineThickness": "normal",
