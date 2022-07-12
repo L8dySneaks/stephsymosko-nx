@@ -12,20 +12,20 @@ jobs:
         run: echo $BT_EVENT_MARKER
         env:
           BT_EVENT_MARKER: release-${{ steps.date.outputs.date }}
-      - name: Create BT Event Marker
-        run: |
-          curl --request POST \
-            --url https://api.bluetriangletech.com/event-markers \
-            --header 'Content-Type: application/json' \
-            --header 'X-API-Email: ${{ secrets.BLUE_TRIANGLE_EMAIL }}' \
-            --header 'X-API-Key: ${{ secrets.BLUE_TRIANGLE_API_KEY }}' \
-            --data '{"prefix": "dsg2",
-          "eventStart": "${{ steps.date.outputs.date }}",
-          "eventType": "site",
-          "eventName": "Actions Test 8",
-          "annotation": "Secrets Testing",
-          "lineColor": "yellow",
-          "lineThickness": "normal",
-          "lineStyle": "solid",
-          "timezone": "America/New_York",
-          "description": "this was a test"}'
+      # - name: Create BT Event Marker
+      #   run: |
+      #     curl --request POST \
+      #       --url https://api.bluetriangletech.com/event-markers \
+      #       --header 'Content-Type: application/json' \
+      #       --header 'X-API-Email: ${{ secrets.BLUE_TRIANGLE_EMAIL }}' \
+      #       --header 'X-API-Key: ${{ secrets.BLUE_TRIANGLE_API_KEY }}' \
+      #       --data '{"prefix": "dsg2",
+      #     "eventStart": "1536552000",
+      #     "eventType": "site",
+      #     "eventName": "Actions Test 7",
+      #     "annotation": "Secrets Testing",
+      #     "lineColor": "yellow",
+      #     "lineThickness": "normal",
+      #     "lineStyle": "solid",
+      #     "timezone": "America/New_York",
+      #     "description": "this was a test"}'
