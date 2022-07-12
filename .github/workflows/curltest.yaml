@@ -20,7 +20,7 @@ jobs:
             --header 'X-API-Email: ${{ secrets.BLUE_TRIANGLE_EMAIL }}' \
             --header 'X-API-Key: ${{ secrets.BLUE_TRIANGLE_API_KEY }}' \
             --data '{"prefix": "dsg2",
-          "eventStart": "${{ BT_EVENT_MARKER}}",
+          "eventStart": "${{ steps.date.outputs.date }}",
           "eventType": "site",
           "eventName": "Actions Test 8",
           "annotation": "Secrets Testing",
