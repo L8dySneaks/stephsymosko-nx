@@ -7,17 +7,17 @@ jobs:
       - name: my-step
         run: |
           curl --request POST \
-           --url https://api.bluetriangle.com/event-markers \
-           --header 'Content-Type: application/json' \
-           --header 'X-API-Email: ${{ secrets.BLUE_TRIANGLE_EMAIL }}' \
-           --header 'X-API-Key: ${{ secrets.BLUE_TRIANGLE_API_KEY }}' \
-           --data '{"prefix": "dsg2",
+            --url https://api.bluetriangletech.com/event-markers \
+            --header 'Content-Type: application/json' \
+            --header 'X-API-Email: Stephanie.Symosko@dcsg.com' \
+            --header 'X-API-Key: ab243bfe4012b551a607b741e23b4850' \
+            --data '{"prefix": "dsg2",
           "eventStart": "1536552000",
           "eventType": "site",
-          "eventName": "Testing Actions",
-          "annotation": "API Actions Test",
+          "eventName": "Actions Test 1",
+          "annotation": "API Testing",
           "lineColor": "yellow",
           "lineThickness": "normal",
-          "lineStyle": "dotted",
+          "lineStyle": "solid",
           "timezone": "America/New_York",
-          "description": "This is a github test"}'
+          "description": "this was a test"}'
