@@ -19,7 +19,7 @@ jobs:
         run: echo "This is Epoch date :" ${{ steps.date.outputs.date }}
       - name: Get Release Name
         id: release-name
-        run: echo ${{ github.event.release.name }}
+        run: echo "::set-output name=bt-event-name::${{ github.event.release.name }}"
       - name: Create BT Marker
         run: |
           curl --request POST \
@@ -30,7 +30,7 @@ jobs:
             --data '{"prefix": "dsg2",
           "eventStart": '${{ steps.date.outputs.date }}',
           "eventType": "site",
-          "eventName": "Actions Test 9",
+          "eventName": '${{ steps.release-name.outputs.bt-event-name }}',
           "annotation": "Secrets Testing",
           "lineColor": "yellow",
           "lineThickness": "normal",
