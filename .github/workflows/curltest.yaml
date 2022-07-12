@@ -9,7 +9,7 @@ jobs:
         run: ::set-output name=EPOCH_DATE::date +"%s"
         id: get-epoch-date
       - name: print-date
-        run: echo "Date is : ${{ steps.get-epoch-date.outputs.EPOCH_DATE }} "
+        run: "echo Date is : ${{ steps.get-epoch-date.outputs.EPOCH_DATE }} "
       - name: create marker
         run: |
           curl --request POST \
