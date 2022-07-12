@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get-date
-        run: RELEASEDATE=date +"%s"
+        run: RELEASEDATE=$(date +"%s")
       - name: print-date
         run: echo "RELEASEDATE=$RELEASEDATE"
       - name: create marker
