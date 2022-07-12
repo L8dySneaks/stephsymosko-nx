@@ -5,9 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get-date
-        run: RELEASEDATE=$(date +"%s")
+        shell: bash
+        run: ::set-output name=EPOCH_DATE::date +"%s"
+        id: get-epoch-date
       - name: print-date
-        run: echo "RELEASEDATE=$RELEASEDATE"
+        run: echo "Date is : ${{ steps.get-epoch-date.outputs.EPOCH_DATE }} "
       - name: create marker
         run: |
           curl --request POST \
