@@ -15,6 +15,9 @@ jobs:
           RELEASE_NAME: nightly-release-${{ steps.date.outputs.date }}
       - name: Print Epoch Time Only
         run: echo "This is Epoch date :" ${{ steps.date.outputs.date }}
+      - name: Get Release Name
+        id: release-name
+        run: echo " Release Name ${{ github.event.release.name}}"
       - name: Create BT Marker
         run: |
           curl --request POST \
