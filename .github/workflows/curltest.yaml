@@ -1,4 +1,6 @@
-on: [push]
+on:
+  release:
+    types: [published]
 name: build
 jobs:
   build:
@@ -35,3 +37,5 @@ jobs:
           "lineStyle": "solid",
           "timezone": "America/New_York",
           "description": "this was a test"}'
+
+
