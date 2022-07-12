@@ -30,7 +30,7 @@ jobs:
             --data '{"prefix": "dsg2",
           "eventStart": '${{ steps.date.outputs.date }}',
           "eventType": "site",
-          "eventName": '${{ steps.release-name.outputs.bt-event-name }}',
+          "eventName": "Actions Test 10",
           "annotation": "Secrets Testing",
           "lineColor": "yellow",
           "lineThickness": "normal",
