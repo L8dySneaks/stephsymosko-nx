@@ -13,3 +13,5 @@ jobs:
         env:
           TAG_NAME: nightly-tag-${{ steps.date.outputs.date }}
           RELEASE_NAME: nightly-release-${{ steps.date.outputs.date }}
+      - name: Print Epoch Time Only
+        run: echo 'This is Epoch date : ${{ steps.date.outputs.date }}'
