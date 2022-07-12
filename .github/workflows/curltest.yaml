@@ -9,13 +9,13 @@ jobs:
           curl --request POST \
             --url https://api.bluetriangletech.com/event-markers \
             --header 'Content-Type: application/json' \
-            --header 'X-API-Email: Stephanie.Symosko@dcsg.com' \
-            --header 'X-API-Key: ab243bfe4012b551a607b741e23b4850' \
+            --header 'X-API-Email: ${{ secrets.BLUE_TRIANGLE_EMAIL }}' \
+            --header 'X-API-Key: ${{ secrets.BLUE_TRIANGLE_API_KEY }}' \
             --data '{"prefix": "dsg2",
           "eventStart": "1536552000",
           "eventType": "site",
-          "eventName": "Actions Test 1",
-          "annotation": "API Testing",
+          "eventName": "Actions Test 2",
+          "annotation": "Secrets Testing",
           "lineColor": "yellow",
           "lineThickness": "normal",
           "lineStyle": "solid",
