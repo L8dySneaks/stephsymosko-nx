@@ -15,3 +15,20 @@ jobs:
           RELEASE_NAME: nightly-release-${{ steps.date.outputs.date }}
       - name: Print Epoch Time Only
         run: echo "This is Epoch date :" ${{ steps.date.outputs.date }}
+      - name: Create BT Marker
+        run: |
+          curl --request POST \
+            --url https://api.bluetriangletech.com/event-markers \
+            --header 'Content-Type: application/json' \
+            --header 'X-API-Email: ${{ secrets.BLUE_TRIANGLE_EMAIL }}' \
+            --header 'X-API-Key: ${{ secrets.BLUE_TRIANGLE_API_KEY }}' \
+            --data '{"prefix": "dsg2",
+          "eventStart": '${{ steps.date.outputs.date }}',
+          "eventType": "site",
+          "eventName": "Actions Test 9",
+          "annotation": "Secrets Testing",
+          "lineColor": "yellow",
+          "lineThickness": "normal",
+          "lineStyle": "solid",
+          "timezone": "America/New_York",
+          "description": "this was a test"}'
