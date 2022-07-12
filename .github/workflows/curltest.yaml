@@ -7,7 +7,7 @@ jobs:
       - name: get-date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - name: print-date
-        run: echo ${{ steps.date.outputs.date }}
+        run: echo "${{ steps.date.outputs.date }}"
       - name: create marker
         run: |
           curl --request POST \
