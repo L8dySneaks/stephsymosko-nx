@@ -1,0 +1,5 @@
+TOTF:
+- any: ['apps/vitals/.*']
+
+BOTF:
+- any: ['apps/api/.*']
