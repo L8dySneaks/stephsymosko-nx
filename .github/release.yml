@@ -1,0 +1,16 @@
+# .github/release.yml
+
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+  categories:
+    - title: TOTF
+      labels:
+        - TOTF
+    - title: BOTF
+      labels:
+        - BOTF
+    - title: Other Changes
+      labels:
+        - "*"

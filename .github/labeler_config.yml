@@ -1,0 +1,8 @@
+version: 1
+labels:
+  - label: "TOTF"
+    files:
+      - "apps/vitals/.*"
+  - label: "BOTF"
+    files:
+      - "apps/api/.*"
