@@ -7,3 +7,5 @@ TYPESCRIPT:
 STYLING:
   - apps/**/*.scss
   - libs/**/*.scss
+VITALS: apps/vitals/*
+API: apps/api/*
