@@ -1,3 +1,13 @@
-TOTF: apps/vitals/*
-BOTF: apps/api/*
+TOTF: apps/vitals/**/*
+BOTF: apps/api/**/*
 WORKFLOW: .github/*
+TYPESCRIPT:
+  - apps/**/*.ts
+  - libs/**/*.ts
+STYLING:
+  - apps/**/*.scss
+  - libs/**/*.scss
+VITALS: apps/vitals/**/*
+API: apps/api/**/*
+APPS: apps/**
+LIBS: libs/**/*

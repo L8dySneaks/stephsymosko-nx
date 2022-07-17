@@ -14,6 +14,11 @@ export class AppService {
       type: 'Oxygen',
       value: '95',
       label: 'O2'
+    },
+    {
+      type: 'Temperature',
+      value: '97.4',
+      label: 'F'
     }
   ];
   getData(): Vital[] {
