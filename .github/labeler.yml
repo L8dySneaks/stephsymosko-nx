@@ -2,6 +2,8 @@ TOTF: apps/vitals/**/*
 BOTF: apps/api/**/*
 WORKFLOW: .github/*
 TYPESCRIPT:
-  - any: ['apps/**/*.ts', 'libs/**/*.ts']
+  - apps/**/*.ts
+  - libs/**/*.ts
 STYLING:
-  - any: [ 'apps/**/*.scss', 'libs/**/*.scss']
+  - apps/**/*.scss
+  - libs/**/*.scss
