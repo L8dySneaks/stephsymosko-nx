@@ -9,5 +9,5 @@ STYLING:
   - libs/**/*.scss
 VITALS: apps/vitals/**/*
 API: apps/api/**/*
-APPS: apps/*
-LIBS: libs/*
+APPS: apps/**
+LIBS: libs/**/*
