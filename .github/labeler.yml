@@ -1,3 +1,4 @@
 TOTF: apps/vitals/**/*
 BOTF: apps/api/**/*
 WORKFLOW: .github/*
+TYPESCRIPT: apps/**/*.ts

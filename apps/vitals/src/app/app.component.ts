@@ -8,7 +8,7 @@ import { Vital } from '@stephsymosko-nx/data-access';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'vitals';
+  title = 'Dad`s Vitals';
   vitals: Vital[] = [];
 
   constructor(
