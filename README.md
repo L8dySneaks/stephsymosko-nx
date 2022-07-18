@@ -1,6 +1,6 @@
 
 
-# StephsymoskoNx
+# Personal Nx Repo
 
 This project was generated using [Nx](https://nx.dev).
 
@@ -108,3 +108,4 @@ Visit [Nx Cloud](https://nx.app/) to learn more.
 
 ## Github Workflows
 - The Label action uses the action provided by GitHub.  Reference URL https://github.com/actions/labeler
+
