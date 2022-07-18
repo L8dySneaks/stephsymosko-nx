@@ -11,4 +11,7 @@ VITALS: apps/vitals/**/*
 API: apps/api/**/*
 APPS: apps/**
 LIBS: libs/**/*
-documentation: */**.md
+documentation:
+  - README.md
+  - apps/**/*.md
+  - libs/**/*.md
