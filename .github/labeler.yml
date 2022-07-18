@@ -13,4 +13,5 @@ APPS: apps/**
 LIBS: libs/**/*
 documentation:
   - README.md
-  - ./**/*.md
+  - apps/**/*.md
+  - libs/**/*.md
