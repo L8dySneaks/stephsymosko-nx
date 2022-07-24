@@ -1,4 +1,4 @@
-
+<!--
 <div class="font-mono">
   <header class="px-xl py-md bg-primary-light text-center text-xl font-bold shadow-md">Dad's Vitals Board</header>
 
@@ -63,14 +63,19 @@
       </a>
     </div>
   </main>
+</div> -->
+
+<div class="container mx-auto px-4 font-mono">
+  <h1 class="text-center text-xl font-bold text-blue-700 shadow-md">Dad's Vital Dashboard</h1>
+
+  <div class="bg-indigo-500">
+    <stephsymosko-nx-vitals [vitals]="vitals"></stephsymosko-nx-vitals>
+  </div>
+
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="addVital()">
+   Add Vital
+  </button>
+
 </div>
 
 
-
-<div class="bg-indigo-500">
-  <stephsymosko-nx-vitals [vitals]="vitals"></stephsymosko-nx-vitals>
-</div>
-
-<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="addVital()">
- Add Vital
-</button>
