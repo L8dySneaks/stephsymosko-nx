@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 
 @Controller('auth')
 export class AuthController {
@@ -7,5 +7,12 @@ export class AuthController {
     return {
       authenticated: true,
     };
+  }
+
+  @Post()
+  authenticate(@Body()  postData: { username: string; password: string}) {
+    const { username, password } = postData;
+    // check the database
+    console.log(username, password);
   }
 }
