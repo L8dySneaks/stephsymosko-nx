@@ -1,32 +1,34 @@
 import { Injectable } from '@nestjs/common';
 import { Vital } from '@stephsymosko-nx/data-access';
 
+
+const vitals: Vital[] = [
+  {
+    type: 'Blood Pressure',
+    value: '127/77',
+    label: 'BP'
+  },
+  {
+    type: 'Oxygen',
+    value: '95',
+    label: 'O2'
+  },
+  {
+    type: 'Temperature',
+    value: '97.4',
+    label: 'F'
+  }
+];
 @Injectable()
 export class AppService {
 
-  vitals: Vital[] = [
-    {
-      type: 'Blood Pressure',
-      value: '127/77',
-      label: 'BP'
-    },
-    {
-      type: 'Oxygen',
-      value: '95',
-      label: 'O2'
-    },
-    {
-      type: 'Temperature',
-      value: '97.4',
-      label: 'F'
-    }
-  ];
-  getData(): Vital[] {
-    return this.vitals;
+
+  getAllVitals(): Vital[] {
+    return vitals;
   }
 
   addVital() {
-    this.vitals.push({
+    vitals.push({
       type: 'Temperature',
       value: '96.9',
       label: 'F'

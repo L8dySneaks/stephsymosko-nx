@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@stephsymosko-nx/auth": ["libs/auth/src/index.ts"],
       "@stephsymosko-nx/data-access": ["libs/data-access/src/index.ts"],
       "@stephsymosko-nx/shared-ui": ["libs/shared-ui/src/index.ts"]
     }
