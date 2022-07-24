@@ -1,9 +1,17 @@
 <ul>
-  <li *ngFor="let v of vitals" class="vital">{{ v.type }}</li>
+  <li *ngFor="let vital of vitals" class="vital">{{ vital.type }}</li>
 </ul>
 
 
 <h1>Vitals Shared UI</h1>
 <div class="flex flex-row">
-  <div class="basis-1/4" *ngFor="let v of vitals" class="vital">{{ v.type }}</div>
+  <div class="basis-1/4" *ngFor="let vital of vitals" class="vital">
+    <h3>
+      <a [title]="vital.type + ' details'">{{ vital.type }}</a>
+    </h3>
+
+    <p *ngIf="vital.value">
+      Value : {{ vital.value }}
+    </p>
+  </div>
 </div>
