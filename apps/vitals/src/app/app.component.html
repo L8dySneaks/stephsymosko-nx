@@ -1,4 +1,4 @@
-
+<!--
 <div class="font-mono">
   <header class="px-xl py-md bg-primary-light text-center text-xl font-bold shadow-md">Dad's Vitals Board</header>
 
@@ -73,4 +73,20 @@
 
 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="addVital()">
  Add Vital
-</button>
+</button> -->
+
+
+
+<div id="vitals-container" class="container font-mono flex flex-row">
+    <div id="side-nav" class="basis-1/5 bg-slate-700">
+      Side Nav
+    </div>
+    <div id="dashboard" class="basis-4/5">
+        <div id="vital-cards" class="flex flex-row mx-auto">
+          <div id="oxygen" class="basis-1/4 rounded-lg bg-zinc-900 items-center text-center">Oxygen</div>
+          <div id="heart-rate" class="basis-1/4 rounded-lg bg-zinc-900 items-center text-center">Heart Rate</div>
+          <div id="temperature" class="basis-1/4 rounded-lg bg-zinc-900 items-center text-center">Temperature</div>
+          <div id="blood-pressure" class="basis-1/4 rounded-lg bg-zinc-900 items-center text-center">Blood Pressure</div>
+        </div>
+    </div>
+</div>
