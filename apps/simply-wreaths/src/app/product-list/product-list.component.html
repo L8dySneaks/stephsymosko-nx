@@ -10,4 +10,13 @@
   </p>
 
   <button (click)="share()"> Share </button>
+  <sw-product-alerts
+    [product]="product"
+    (notify)="onNotify()">
+  </sw-product-alerts>
+  <hr> <br><br />
 </div>
+
+
+
+
