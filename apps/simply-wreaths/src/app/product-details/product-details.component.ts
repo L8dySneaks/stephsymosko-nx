@@ -1,3 +1,4 @@
+import { CartService } from './../cart/cart.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product, products } from '../products';
@@ -10,7 +11,9 @@ import { Product, products } from '../products';
 export class ProductDetailsComponent implements OnInit {
 
   product: Product | undefined;
-  constructor( private route: ActivatedRoute ) {}
+  constructor(
+    private route: ActivatedRoute,
+    private cartService: CartService ) {}
 
   ngOnInit(): void {
     // Get product id from current route
@@ -20,5 +23,10 @@ export class ProductDetailsComponent implements OnInit {
     // find product that matches product id from route
     this.product = products.find(product => product.id === productIdFromRoute);
 
+  }
+
+  addToCart(product: Product){
+    this.cartService.addToCart(product);
+    window.alert(`You have just added ${product.name} to your cart.`);
   }
 }
