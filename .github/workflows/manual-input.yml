@@ -13,21 +13,15 @@ on:
         description: 'Event annotation'
         default: 'What is the update?'
         required: true
-      eventDate: 'Marker start date'
-        description: 'YearMonthDayHourMinSec'
-        default: 'Format like this YearMonthDayHourMinSec'
-        required: true
 jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
     - name: Get today's date
       id: todaysdate
-      run: echo "::set-ouput name=todaysdate::$v(date +'%Y.%m.%d-%H%M%S')"
-    - name: Print Today's date
+      run: echo "::set-ouput name=date::$v(date +'%Y.%m.%d-%H%M%S')"
+    - name: Print today's date
       run: echo "This is today's date :" ${{ steps.todaysdate.outputs.todaysdate }}
-    - name: Print input date
-      run: echo "This is the input date :" ${{ github.events.inputs.eventDate }}
     - name: Set epoch date
       id: epochdate
       run: echo "::set-output name=epochdate::$(date +'%s')"
