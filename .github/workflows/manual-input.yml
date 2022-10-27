@@ -13,6 +13,10 @@ on:
         description: 'Event annotation'
         default: 'What is the update?'
         required: true
+      eventDate:
+        description: 'Start date for event'
+        default: 'Format like YearMonthDayHourMinSec'
+        required: true
 jobs:
   greet:
     runs-on: ubuntu-latest
