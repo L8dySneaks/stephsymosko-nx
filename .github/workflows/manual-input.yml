@@ -23,9 +23,9 @@ jobs:
     steps:
     - name: Get today's date
       id: todaysdate
-      run: echo "::set-ouput name=todaysdate::$(date +'%Y%m%d%H%M%S')"
+      run: echo "TODAYS_DATE=$('%Y%m%d%H%M%S')" >> $GITHUB_OUTPUT
     - name: Print today's date
-      run: echo "This is today's date ${{ steps.todaysdate.outputs.todaysdate }} "
+      run: echo "This is today's date ${{ steps.todaysdate.outputs.TODAYS_DATE }} "
     - name: Set epoch date
       id: epochdate
       run: echo "::set-output name=epochdate::$(date +'%s')"
