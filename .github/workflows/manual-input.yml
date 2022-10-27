@@ -29,3 +29,5 @@ jobs:
       run: echo "This is the epoch date :" ${{ steps.epochdate.outputs.epochdate }}
     - name: Send Event Marker
       run: echo "Hello ${{ github.event.inputs.name }}"
+    - name: Show annotation message
+      run: echo "This is what the annotation will say ${{ github.event.inputs.annotation }}"
