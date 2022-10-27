@@ -9,7 +9,7 @@ on:
         description: 'Event Marker name'
         default: 'Manual Test'
         required: true
-      name:
+      annotation:
         description: 'Event annotation'
         default: 'What is the update?'
         required: true
