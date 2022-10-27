@@ -13,7 +13,6 @@ on:
         description: 'Event annotation'
         default: 'What is the update?'
         required: true
-
 jobs:
   greet:
     runs-on: ubuntu-latest
@@ -30,4 +29,3 @@ jobs:
       run: echo "This is the epoch date :" ${{ steps.epochdate.outputs.epochdate }}
     - name: Send Event Marker
       run: echo "Hello ${{ github.event.inputs.name }}"
-
