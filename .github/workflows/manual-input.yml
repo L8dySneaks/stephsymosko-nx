@@ -1,0 +1,19 @@
+# This is a manually triggered workflow that takes an input
+
+name: manual-input-workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Event Marker name'
+        default: 'Manual Test'
+        required: true
+        
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send Event Marker
+      run: echo "Hello ${{ github.event.inputs.name }}"
+      
