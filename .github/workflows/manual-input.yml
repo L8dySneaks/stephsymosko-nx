@@ -56,7 +56,7 @@ jobs:
       run: echo "This is today's date ${{ steps.todaysdate.outputs.TODAYS_DATE }} "
     - name: Set epoch date
       id: epochdate
-      run: echo "::set-output name=epochdate::$(date +'%s')"
+      run: echo "::set-output name=epochdate::$(date -d '${{ steps.todaysdate.outputs.TODAYS_DATE }}' +'%s')"
     - name: Print Epoch Date
       run: echo "This is the epoch date :" ${{ steps.epochdate.outputs.epochdate }}
     - name: Print out final message from all inputs
