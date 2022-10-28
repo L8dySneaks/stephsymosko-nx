@@ -59,9 +59,5 @@ jobs:
       run: echo "::set-output name=epochdate::$(date +'%s')"
     - name: Print Epoch Date
       run: echo "This is the epoch date :" ${{ steps.epochdate.outputs.epochdate }}
-    - name: Send Event Marker
-      run: echo "Hello ${{ github.event.inputs.name }}"
-    - name: Show annotation message
-      run: echo "This is what the annotation will say ${{ github.event.inputs.annotation }}"
-    - name: Show date from input
-      run: echo "This is the date from the input ${{ github.event.inputs.eventDate }}"
+    - name: Print out final message from all inputs
+      run: echo "This is the list of final inputs - ${{ github.event.inputs.name }}, ${{ github.event.inputs.annotation }}, ${{ github.event.inputs.eventDate }}, ${{ github.event.inputs.lineColor }}, ${{ github.event.inputs.lineThickness }}, ${{ github.event.inputs.lineStyle }}"
