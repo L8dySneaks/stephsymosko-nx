@@ -17,6 +17,34 @@ on:
         description: 'Start date for event'
         default: 'Format like YearMonthDayHourMinSec'
         required: true
+      lineColor:
+        type: choice
+        description: Line Color
+        options:
+        - red
+        - maroon
+        - orange
+        - yellow
+        - lime green
+        - green
+        - aqua
+        - blue
+        - purple
+        - fuchsia
+      lineThickness:
+        type: choice
+        description: Line Thickness
+        options:
+        - thin
+        - normal
+        - thick
+      lineStyle:
+        type: choice
+        description: Line Style
+        options:
+        - solid
+        - dashed
+        - dotted
 jobs:
   greet:
     runs-on: ubuntu-latest
