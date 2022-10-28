@@ -9,23 +9,55 @@ on:
         description: 'Event Marker name'
         default: 'Manual Test'
         required: true
-      name:
+      annotation:
         description: 'Event annotation'
         default: 'What is the update?'
         required: true
+      eventDate:
+        description: 'Start date for event'
+        default: 'Format like 06/12/2022 07:30:35'
+        required: true
+      lineColor:
+        type: choice
+        description: Line Color
+        options:
+        - red
+        - maroon
+        - orange
+        - yellow
+        - lime green
+        - green
+        - aqua
+        - blue
+        - purple
+        - fuchsia
+      lineThickness:
+        type: choice
+        description: Line Thickness
+        options:
+        - thin
+        - normal
+        - thick
+      lineStyle:
+        type: choice
+        description: Line Style
+        options:
+        - solid
+        - dashed
+        - dotted
 jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
     - name: Get today's date
       id: todaysdate
-      run: echo "::set-ouput name=date::$v(date +'%Y.%m.%d-%H%M%S')"
+      run: echo "TODAYS_DATE=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_OUTPUT
     - name: Print today's date
-      run: echo "This is today's date :" ${{ steps.todaysdate.outputs.todaysdate }}
+      run: echo "This is today's date ${{ steps.todaysdate.outputs.TODAYS_DATE }} "
     - name: Set epoch date
       id: epochdate
-      run: echo "::set-output name=epochdate::$(date +'%s')"
+      run: echo "::set-output name=epochdate::$(date -d '${{ github.event.inputs.eventDate }}' +'%s')"
     - name: Print Epoch Date
       run: echo "This is the epoch date :" ${{ steps.epochdate.outputs.epochdate }}
-    - name: Send Event Marker
-      run: echo "Hello ${{ github.event.inputs.name }}"
+    - name: Print out final message from all inputs
+      run: echo "This is the list of final inputs - ${{ github.event.inputs.name }}, ${{ github.event.inputs.annotation }}, ${{ github.event.inputs.eventDate }}, ${{ github.event.inputs.lineColor }}, ${{ github.event.inputs.lineThickness }}, ${{ github.event.inputs.lineStyle }}"
