@@ -15,7 +15,7 @@ on:
         required: true
       eventDate:
         description: 'Start date for event'
-        default: 'Format like YearMonthDayHourMinSec'
+        default: 'Format like 06/12/2022 07:30:35'
         required: true
       lineColor:
         type: choice
@@ -56,7 +56,7 @@ jobs:
       run: echo "This is today's date ${{ steps.todaysdate.outputs.TODAYS_DATE }} "
     - name: Set epoch date
       id: epochdate
-      run: echo "::set-output name=epochdate::$(date -d '${{ steps.todaysdate.outputs.TODAYS_DATE }}' +'%s')"
+      run: echo "::set-output name=epochdate::$(date -d '${{ github.event.inputs.eventDate }}' +'%s')"
     - name: Print Epoch Date
       run: echo "This is the epoch date :" ${{ steps.epochdate.outputs.epochdate }}
     - name: Print out final message from all inputs
