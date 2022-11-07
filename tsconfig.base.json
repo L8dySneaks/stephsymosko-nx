@@ -16,7 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@stephsymosko-nx/data-access": ["libs/data-access/src/index.ts"],
-      "@stephsymosko-nx/shared-ui": ["libs/shared-ui/src/index.ts"]
+      "@stephsymosko-nx/shared-ui": ["libs/shared-ui/src/index.ts"],
+      "@stephsymosko-nx/vitals-data-client": [
+        "libs/vitals-data-client/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
